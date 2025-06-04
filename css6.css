@@ -1,12 +1,13 @@
 body {
-    background-color: rgb(233, 189, 230);
+    background-color: rgb(104, 97, 148);
     padding: 40px;
     line-height: 1.6rem;
+     color:white;
      font-family: Arial, Helvetica, sans-serif;
 }
 
  .accordian {
-    background-color: white;
+    background-color: black;
     padding: 4px 16px;
     margin-bottom: 16px;
      border-radius: 4px;

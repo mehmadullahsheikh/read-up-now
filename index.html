@@ -11,105 +11,107 @@
     <h1>FAQ's</h1>
     <div class="accordian">
         <div class="question">
-            <h4>Git Flow</h4>
+           <h4>🔧 1. Git Configuration (One-Time Setup)</h4>
             <i class=" icon fa-sharp fa-solid fa-caret-down"></i>
         </div>
         <div class="answer">
-            <h4>main (production)
-                   |
-                   |-- develop
-                         |-- feature/login
-                         |-- feature/dashboard
-                         |-- bugfix/crash
- </h4>
-        </div>
-    </div>
-    <div class="accordian">
-        <div class="question">
-            <h4>Common Git Commands.</h4>
-            <i class=" icon fa-sharp fa-solid fa-caret-down"></i>
-        </div>
-        <div class="answer">
-            <h4># Setup
-git config --global user.name "Your Name"
+            <h4><pre><code>git config --global user.name "Your Name"
 git config --global user.email "you@example.com"
-
-# Repo operations
-git clone <url>
-git status
-git add .
-git commit -m "message"
-git push origin branch-name
-git pull
-
-# Branching
-git checkout -b feature/login
-git checkout main
-git merge feature/login
-git branch -d feature/login
-.</h4>
+git config --global core.editor "code --wait"</code></pre></h4>
         </div>
     </div>
     <div class="accordian">
         <div class="question">
-            <h4>Basic Windows CMD Commands.</h4>
+            <h4>📁 2. Starting a New Project</h4>
             <i class=" icon fa-sharp fa-solid fa-caret-down"></i>
         </div>
         <div class="answer">
-            <h4>| Command         | Description                                       |
-| --------------- | ------------------------------------------------- |
-| `dir`           | Lists files and folders in the current directory. |
-| `cd`            | Changes directory (e.g., `cd Desktop`)            |
-| `cd ..`         | Moves one folder up                               |
-| `cls`           | Clears the screen                                 |
-| `exit`          | Closes Command Prompt                             |
-| `echo Hello`    | Prints text to screen                             |
-| `type file.txt` | Displays content of a text file                   |
-.</h4>
+            <h4> <pre><code>git init            # Initialize a local Git repo
+git remote add origin https://github.com/user/repo.git</code></pre></h4>
         </div>
     </div>
     <div class="accordian">
         <div class="question">
-            <h4>File and Folder Operations.</h4>
+          <h4>📥 3. Cloning Existing Project</h4>
             <i class=" icon fa-sharp fa-solid fa-caret-down"></i>
         </div>
         <div class="answer">
-            <h4>| Command                       | Description                      |
-| ----------------------------- | -------------------------------- |
-| `mkdir foldername`            | Creates a new folder             |
-| `rmdir foldername`            | Deletes a folder (only if empty) |
-| `del file.txt`                | Deletes a file                   |
-| `copy file1.txt file2.txt`    | Copies a file                    |
-| `move file1.txt D:\NewFolder` | Moves a file                     |
-| `ren oldname.txt newname.txt` | Renames a file                   |
-.</h4>
+            <h4><pre><code>git clone https://github.com/user/repo.git</code></pre></h4>
         </div>
     </div>
     <div class="accordian">
         <div class="question">
-            <h4>Lorem ipsum dolor sit amet consectetur.</h4>
+           <h4>📦 4. Adding and Committing Code</h4>
             <i class=" icon fa-sharp fa-solid fa-caret-down"></i>
         </div>
         <div class="answer">
-            <h4>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos amet eveniet, inventore ea perspiciatis adipisci non quas esse eaque delectus.</h4>
+            <h4> <pre><code>git status                   # Check file changes
+git add file.txt             # Add a specific file
+git add .                    # Add all files
+git commit -m "Meaningful message"</code></pre></h4>
         </div>
     </div>
     <div class="accordian">
         <div class="question">
-            <h4>Lorem ipsum dolor sit amet consectetur.</h4>
+            <h4>🚀 5. Pushing Code to GitHub</h4>
             <i class=" icon fa-sharp fa-solid fa-caret-down"></i>
         </div>
         <div class="answer">
-            <h4>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos amet eveniet, inventore ea perspiciatis adipisci non quas esse eaque delectus.</h4>
+           <p>
+<pre><code>git push origin main         # Push to main branch
+git push -u origin main      # Push and set upstream</code></pre>
+</p>
         </div>
     </div>
     <div class="accordian">
         <div class="question">
-            <h4>Lorem ipsum dolor sit amet consectetur.</h4>
+            <h4>Understanding "cd Desktop" in Windows CMD.</h4>
             <i class=" icon fa-sharp fa-solid fa-caret-down"></i>
         </div>
         <div class="answer">
-            <h4>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos amet eveniet, inventore ea perspiciatis adipisci non quas esse eaque delectus.</h4>
+           <p>
+The <code>cd</code> command in Windows Command Prompt (CMD) is used to "change directory." 
+Typing <code>cd Desktop</code> attempts to switch your current working directory to the Desktop folder of the currently logged-in user. 
+However, this command only works correctly if:
+</p>
+<ul>
+  <li>You are already inside your user directory (e.g., <code>C:\Users\YourUserName</code>).</li>
+  <li>The Desktop folder is not renamed or localized (e.g., in other languages like Hindi).</li>
+</ul>
+<p>
+If <code>cd Desktop</code> gives an error like "The system cannot find the path specified," try these steps:
+</p>
+<ol>
+  <li>First, navigate to your home directory using <code>cd %USERPROFILE%</code>.</li>
+  <li>Then run <code>cd Desktop</code> to enter the Desktop folder.</li>
+</ol>
+<p>
+For non-English systems, you might need to use the localized name of the Desktop folder, such as <code>cd "डेस्कटॉप"</code>, or check using <code>dir</code> to see the correct name.
+</p>
+<p>
+To always go to the Desktop reliably, use:
+</p>
+<pre><code>cd /d "%USERPROFILE%\Desktop"</code></pre>
+<p>
+This version switches drives (if necessary) and works across most configurations.
+</p>
+        </div>
+    </div>
+    <div class="accordian">
+        <div class="question">
+           <h1>Why "cd Desktop" Might Not Work</h1>
+            <i class=" icon fa-sharp fa-solid fa-caret-down"></i>
+        </div>
+        <div class="answer">
+           <p>
+If you're not inside your user directory, CMD won't find the <code>Desktop</code> folder. 
+You need to first navigate to your user profile using:
+</p>
+<pre><code>cd %USERPROFILE%</code></pre>
+<p>
+Then use:
+</p>
+<pre><code>cd Desktop</code></pre>
         </div>
     </div>
     <script src="script6.js"></script>
